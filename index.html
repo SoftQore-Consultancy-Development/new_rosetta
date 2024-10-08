@@ -1189,6 +1189,21 @@ mus nellen etesque habitant morbine.</div>
   });
 })(jQuery);
 </script>
+
+<script>
+  // Define the API URL
+  const apiUrl = 'https://api.example.com/data'; // Replace with the actual API URL
+
+  // Use fetch() to make a GET request to the API
+  fetch(apiUrl)
+      .then(response => response.json()) // Convert the response to JSON
+      .then(data => {
+          // Process and display the API data
+          const apiDataDiv = document.getElementById('api-data');
+          apiDataDiv.innerHTML = `<p>API Data: ${JSON.stringify(data)}</p>`;
+      })
+      .catch(error => console.error('Error fetching data:', error)); // Handle any errors
+</script>
 </body>
 
 <!-- Mirrored from html.Rosetta-Holiday-Homes.com/2023/Rosetta Holiday Homes-html/index-1-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Sep 2024 18:34:49 GMT -->
